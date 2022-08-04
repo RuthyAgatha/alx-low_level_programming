@@ -21,13 +21,13 @@ int op_add(int a, int b)
  *     *
  *      * Return: difference of a and b
  *       */
-int op_sub(int a, in b)
+int op_sub(int a, int b)
 {
-		ret (a - b);
+		return (a - b);
 }
 
 /**
- *  * op_mul - multiturnplies a and b
+ *  * op_mul - multiplies a and b
  *   * @a: first number
  *    * @b: second number
  *     *
