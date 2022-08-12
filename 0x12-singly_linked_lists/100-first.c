@@ -1,14 +1,24 @@
-nclude <stdio.h>
-
-void first(void) __attribute__ ((constructor));
-
+#include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 /**
- *  * first - prints something before main
- *   *
- *    * Return: void
+ *  * free_list - frees a linked list.
+ *   * @head: The pointer to the first linked list node
+ *    * Return: nothing.
  *     */
-void first(void)
+void free_list(list_t *head)
 {
-		printf("You're beat! and yet, you must allow,\n");
-			printf("I bore my house upon my back!\n");
+
+	list_t *current, *next;
+
+	current = head;
+
+	while (current != NULL)
+	{
+			next = current->next;
+				free(current->str);
+					free(current);
+						current = next;
+	}
+
 }
